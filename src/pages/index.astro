@@ -30,7 +30,9 @@ const maternityImages = [
 <Layout title="Grace King Photography">
   <Header />
   <main>
-    <Hero />
+    <section id="home" class="scroll-mt-24">
+      <Hero />
+    </section>
 
     <!-- Welcome Section -->
     <section class="py-20 px-4 md:px-8 lg:px-16 bg-cream">
@@ -52,42 +54,105 @@ const maternityImages = [
     <Gallery title="Newborn" images={newbornImages} category="newborn" />
 
     <!-- About Section -->
-    <About />
+    <section id="about" class="scroll-mt-24">
+      <About />
+    </section>
 
-    <!-- Services Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-light-brown/5">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-serif text-center mb-16">Services</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Service 1 -->
-          <div class="text-center">
-            <h3 class="text-2xl font-serif mb-4">Family</h3>
-            <p class="text-light">
-              [Service description for family photography]
+    <!-- Details Section -->
+    <section id="details" class="py-20 px-4 md:px-8 lg:px-16 bg-cream scroll-mt-24">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-serif uppercase text-center mb-12">Session Details</h2>
+        <div class="space-y-8">
+          <div>
+            <h3 class="font-serif uppercase mb-4">What to Expect</h3>
+            <p class="text-light leading-relaxed">
+              [Details about what clients can expect during a session - session length, location options, what to bring, etc.]
             </p>
           </div>
-
-          <!-- Service 2 -->
-          <div class="text-center">
-            <h3 class="text-2xl font-serif mb-4">Maternity</h3>
-            <p class="text-light">
-              [Service description for maternity photography]
+          <div>
+            <h3 class="font-serif uppercase mb-4">Pricing & Packages</h3>
+            <p class="text-light leading-relaxed">
+              [Information about pricing structure and available packages]
             </p>
           </div>
-
-          <!-- Service 3 -->
-          <div class="text-center">
-            <h3 class="text-2xl font-serif mb-4">Newborn</h3>
-            <p class="text-light">
-              [Service description for newborn photography]
+          <div>
+            <h3 class="font-serif uppercase mb-4">Booking Process</h3>
+            <p class="text-light leading-relaxed">
+              [Steps for booking a session, deposit requirements, scheduling, etc.]
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 md:px-8 lg:px-16 scroll-mt-24">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-serif uppercase text-center mb-12">Education & Experience</h2>
+        <div class="space-y-6">
+          <p class="text-light leading-relaxed text-center">
+            [Information about Grace's background, training, certifications, and experience in photography]
+          </p>
+          <div class="grid md:grid-cols-2 gap-8 mt-12">
+            <div class="text-center">
+              <h3 class="font-serif uppercase mb-4">Certifications</h3>
+              <p class="text-light">
+                [List of professional certifications and credentials]
+              </p>
+            </div>
+            <div class="text-center">
+              <h3 class="font-serif uppercase mb-4">Specializations</h3>
+              <p class="text-light">
+                [Areas of expertise and special training]
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journal Section -->
+    <section id="journal" class="py-20 px-4 md:px-8 lg:px-16 bg-cream scroll-mt-24">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-serif uppercase text-center mb-12">Journal</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Journal Entry 1 -->
+          <article class="bg-white p-6">
+            <div class="aspect-[4/3] bg-light-brown/10 mb-4"></div>
+            <h3 class="font-serif uppercase mb-2">[Blog Post Title 1]</h3>
+            <p class="text-light text-sm mb-4">[Date]</p>
+            <p class="text-light text-sm">
+              [Brief excerpt from blog post or testimonial...]
+            </p>
+          </article>
+
+          <!-- Journal Entry 2 -->
+          <article class="bg-white p-6">
+            <div class="aspect-[4/3] bg-light-brown/10 mb-4"></div>
+            <h3 class="font-serif uppercase mb-2">[Blog Post Title 2]</h3>
+            <p class="text-light text-sm mb-4">[Date]</p>
+            <p class="text-light text-sm">
+              [Brief excerpt from blog post or testimonial...]
+            </p>
+          </article>
+
+          <!-- Journal Entry 3 -->
+          <article class="bg-white p-6">
+            <div class="aspect-[4/3] bg-light-brown/10 mb-4"></div>
+            <h3 class="font-serif uppercase mb-2">[Blog Post Title 3]</h3>
+            <p class="text-light text-sm mb-4">[Date]</p>
+            <p class="text-light text-sm">
+              [Brief excerpt from blog post or testimonial...]
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Form -->
-    <ContactForm />
+    <section id="contact" class="scroll-mt-24">
+      <ContactForm />
+    </section>
   </main>
   <Footer />
 </Layout>

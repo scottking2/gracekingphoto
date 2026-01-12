@@ -2,26 +2,30 @@
 // Header component with navigation
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-cream border-b border-gray-200">
-  <nav class="max-w-7xl mx-auto px-8 py-6">
-    <div class="flex justify-between items-center">
+<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/10" style="height: 92px;">
+  <nav class="max-w-7xl mx-auto px-8 h-full">
+    <div class="flex justify-between items-center h-full" style="gap: 0.5em;">
       <!-- Left Navigation -->
-      <ul class="hidden md:flex space-x-8 font-montserrat text-[15px] uppercase tracking-wider">
-        <li><a href="#home" class="hover:text-light-brown transition-colors">Home</a></li>
-        <li><a href="#about" class="hover:text-light-brown transition-colors">About</a></li>
-        <li><a href="#portfolio" class="hover:text-light-brown transition-colors">Details</a></li>
+      <ul class="hidden md:flex items-center" style="gap: 0.5em;">
+        <li><a href="#home" class="font-serif text-[15px] uppercase hover:opacity-70 transition-opacity">Home</a></li>
+        <li class="w-px h-4 bg-black/20"></li>
+        <li><a href="#about" class="font-serif text-[15px] uppercase hover:opacity-70 transition-opacity">About</a></li>
+        <li class="w-px h-4 bg-black/20"></li>
+        <li><a href="#details" class="font-serif text-[15px] uppercase hover:opacity-70 transition-opacity">Details</a></li>
       </ul>
 
       <!-- Logo Center -->
-      <a href="/" class="font-serif text-lg uppercase tracking-ultra hover:text-light-brown transition-colors">
-        Grace King Photo
+      <a href="/" class="font-serif text-[15px] uppercase tracking-widest hover:opacity-70 transition-opacity">
+        Grace King<br/>Photo
       </a>
 
       <!-- Right Navigation -->
-      <ul class="hidden md:flex space-x-8 font-montserrat text-[15px] uppercase tracking-wider">
-        <li><a href="#education" class="hover:text-light-brown transition-colors">Education</a></li>
-        <li><a href="#journal" class="hover:text-light-brown transition-colors">Journal</a></li>
-        <li><a href="#contact" class="hover:text-light-brown transition-colors">Get in Touch</a></li>
+      <ul class="hidden md:flex items-center" style="gap: 0.5em;">
+        <li><a href="#education" class="font-serif text-[15px] uppercase hover:opacity-70 transition-opacity">Education</a></li>
+        <li class="w-px h-4 bg-black/20"></li>
+        <li><a href="#journal" class="font-serif text-[15px] uppercase hover:opacity-70 transition-opacity">Journal</a></li>
+        <li class="w-px h-4 bg-black/20"></li>
+        <li><a href="#contact" class="font-serif text-[15px] uppercase hover:opacity-70 transition-opacity">Get in Touch</a></li>
       </ul>
 
       <!-- Mobile Menu Button -->
@@ -33,14 +37,14 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2">
-      <ul class="flex flex-col space-y-4 font-montserrat text-[15px] uppercase tracking-wider">
-        <li><a href="#home" class="block hover:text-light-brown transition-colors">Home</a></li>
-        <li><a href="#about" class="block hover:text-light-brown transition-colors">About</a></li>
-        <li><a href="#portfolio" class="block hover:text-light-brown transition-colors">Details</a></li>
-        <li><a href="#education" class="block hover:text-light-brown transition-colors">Education</a></li>
-        <li><a href="#journal" class="block hover:text-light-brown transition-colors">Journal</a></li>
-        <li><a href="#contact" class="block hover:text-light-brown transition-colors">Get in Touch</a></li>
+    <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2" style="height: 588px;">
+      <ul class="flex flex-col space-y-4 font-serif text-[15px] uppercase">
+        <li><a href="#home" class="block hover:opacity-70 transition-opacity">Home</a></li>
+        <li><a href="#about" class="block hover:opacity-70 transition-opacity">About</a></li>
+        <li><a href="#details" class="block hover:opacity-70 transition-opacity">Details</a></li>
+        <li><a href="#education" class="block hover:opacity-70 transition-opacity">Education</a></li>
+        <li><a href="#journal" class="block hover:opacity-70 transition-opacity">Journal</a></li>
+        <li><a href="#contact" class="block hover:opacity-70 transition-opacity">Get in Touch</a></li>
       </ul>
     </div>
   </nav>

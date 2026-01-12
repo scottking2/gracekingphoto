@@ -2,6 +2,17 @@
 
 This document lists all content and images needed to complete the website. Use this as a checklist when coordinating with Grace.
 
+## 💡 How to Get Text Content from Current Site
+
+The easiest way to extract all text content from gracekingphoto.com:
+
+1. **Open gracekingphoto.com in your browser**
+2. **Simply copy/paste visible text** from each section (scroll through the page)
+3. **Paste into a document** organized by section (see list below)
+4. **Send to Scott** via email or text
+
+The current site uses Showit which loads content dynamically, so manual copying is the fastest way to get the text content.
+
 ## ✅ Completed
 - [x] Website structure and layout
 - [x] Component framework

@@ -2,7 +2,29 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Gallery from '../components/Gallery.astro';
+import About from '../components/About.astro';
+import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
+
+// Placeholder images - replace with actual photos from Grace
+const familyImages = [
+  '/images/gallery/family/placeholder1.jpg',
+  '/images/gallery/family/placeholder2.jpg',
+  '/images/gallery/family/placeholder3.jpg',
+];
+
+const newbornImages = [
+  '/images/gallery/newborn/placeholder1.jpg',
+  '/images/gallery/newborn/placeholder2.jpg',
+  '/images/gallery/newborn/placeholder3.jpg',
+];
+
+const maternityImages = [
+  '/images/gallery/maternity/placeholder1.jpg',
+  '/images/gallery/maternity/placeholder2.jpg',
+  '/images/gallery/maternity/placeholder3.jpg',
+];
 ---
 
 <Layout title="Grace King Photography">
@@ -10,15 +32,62 @@ import Footer from '../components/Footer.astro';
   <main>
     <Hero />
 
-    <!-- Portfolio sections will be added here -->
-    <section class="py-20 px-4 md:px-8 lg:px-16">
-      <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-serif mb-6">Welcome</h2>
-        <p class="text-lg text-light max-w-2xl mx-auto">
-          Portfolio content coming soon. Images and content will be added once provided by Grace.
+    <!-- Welcome Section -->
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-cream">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-serif mb-6">Capturing Life's Precious Moments</h2>
+        <p class="text-lg text-light leading-relaxed">
+          [Welcome text to be added - Introduction to Grace's photography services and approach]
         </p>
       </div>
     </section>
+
+    <!-- Family Portfolio -->
+    <Gallery title="Family" images={familyImages} category="family" />
+
+    <!-- Maternity Portfolio -->
+    <Gallery title="Maternity" images={maternityImages} category="maternity" />
+
+    <!-- Newborn Portfolio -->
+    <Gallery title="Newborn" images={newbornImages} category="newborn" />
+
+    <!-- About Section -->
+    <About />
+
+    <!-- Services Section -->
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-light-brown/5">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-serif text-center mb-16">Services</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="text-center">
+            <h3 class="text-2xl font-serif mb-4">Family</h3>
+            <p class="text-light">
+              [Service description for family photography]
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="text-center">
+            <h3 class="text-2xl font-serif mb-4">Maternity</h3>
+            <p class="text-light">
+              [Service description for maternity photography]
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="text-center">
+            <h3 class="text-2xl font-serif mb-4">Newborn</h3>
+            <p class="text-light">
+              [Service description for newborn photography]
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <ContactForm />
   </main>
   <Footer />
 </Layout>

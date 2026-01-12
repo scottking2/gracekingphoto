@@ -8,9 +8,14 @@ export default {
         'light-brown': '#d2c5b9',
       },
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'], // Free alternative to La Luxes Serif
-        light: ['Lato', 'sans-serif'],
+        sans: ['Lato', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'serif'], // Close match to La Luxes Serif
+        fjalla: ['Fjalla One', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+      letterSpacing: {
+        widest: '0.3em',
+        ultra: '0.4em',
       },
     },
   },

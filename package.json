@@ -1,0 +1,21 @@
+{
+  "name": "gracekingphoto",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.16.8",
+    "@astrojs/tailwind": "^6.2.0",
+    "tailwindcss": "^4.1.0",
+    "swiper": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
+  }
+}

@@ -1,0 +1,44 @@
+---
+// Footer component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-light-brown/10 py-12">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- About -->
+      <div>
+        <h3 class="text-xl font-serif mb-4">Grace King Photography</h3>
+        <p class="text-sm text-light">
+          Professional family, newborn, and maternity photography
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-xl font-serif mb-4">Contact</h3>
+        <p class="text-sm text-light">
+          Email: info@gracekingphoto.com<br/>
+          Phone: (555) 123-4567
+        </p>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h3 class="text-xl font-serif mb-4">Follow</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-light-brown transition-colors" aria-label="Instagram">
+            Instagram
+          </a>
+          <a href="#" class="hover:text-light-brown transition-colors" aria-label="Facebook">
+            Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-8 border-t border-light-brown/20 text-center text-sm text-light">
+      <p>&copy; {currentYear} Grace King Photography. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

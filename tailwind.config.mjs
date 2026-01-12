@@ -9,13 +9,14 @@ export default {
       },
       fontFamily: {
         sans: ['Lato', 'sans-serif'],
-        serif: ['Cormorant Garamond', 'serif'], // Close match to La Luxes Serif
+        serif: ['La Luxes Serif', 'serif'],
         fjalla: ['Fjalla One', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
       letterSpacing: {
         widest: '0.3em',
         ultra: '0.4em',
+        mega: '0.5em',
       },
     },
   },

@@ -2,19 +2,82 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-const pageTitle = "Families";
 ---
 
-<Layout title={`${pageTitle} - Grace King Photography`}>
+<Layout title="Families - Grace King Photography">
   <Header />
   <main class="pt-[92px]">
-    <section class="min-h-screen py-20 px-8">
-      <div class="max-w-7xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-serif text-center mb-12">Families</h1>
-        <p class="text-center text-lg">Content coming soon...</p>
+    
+    <!-- Hero Image -->
+    <section class="h-[524px] relative">
+      <img 
+        src="/images/gallery/ballardfamily2021-20.jpg"
+        alt="Family Photography" 
+        class="w-full h-full object-cover"
+      />
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-cream py-20 md:py-32 px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-serif text-3xl md:text-4xl text-center mb-16">Sweet Notes</h2>
+        
+        <div class="space-y-12">
+          <!-- Testimonial 1 -->
+          <div class="text-center">
+            <p class="text-lg md:text-xl leading-relaxed text-justify italic mb-6">
+              "So happy I was able to work with Grace. The family photos she took will be cherished forever and look absolutely stunning on our wall. She made our little guy feel so comfortable and got the sweetest smiles out of him. Thank you Grace for taking the our family photos, we love them!!"
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="text-center">
+            <p class="text-lg md:text-xl leading-relaxed text-justify italic mb-6">
+              "I am so glad that I have chosen to come to Grace. She has given me beautiful photos of me and my family that I will always love. Precious moments that were natural with my children and I think they are artwork. Thank you so much for your artistic abilities."
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="text-center">
+            <p class="text-lg md:text-xl leading-relaxed text-justify italic mb-6">
+              "Grace was a dream to work with. I was getting a little stressed because my 3 kids were getting crazy, but she reassured me, calmed my kids down, and captured the most precious moments. She is so amazing at what she does, and I can't wait until she can take our pictures again!"
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Gallery Section -->
+    <section class="bg-white py-20 px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="aspect-[259/274]">
+            <img 
+              src="/images/gallery/lovefamily-119.jpg"
+              alt="Family Photography"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="aspect-[259/274]">
+            <img 
+              src="/images/gallery/ballardfamily2021-107.jpg"
+              alt="Family Photography"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-cream py-16 px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <a href="/contact" class="inline-block text-lg uppercase tracking-wider hover:opacity-70 transition-opacity border-b-2 border-current pb-2">
+          Book Your Family Session
+        </a>
+      </div>
+    </section>
+
   </main>
   <Footer />
 </Layout>

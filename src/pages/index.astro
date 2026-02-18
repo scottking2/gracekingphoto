@@ -1,96 +1,100 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Gallery from '../components/Gallery.astro';
-import About from '../components/About.astro';
-import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
-
-// Gallery images extracted from live site
-const galleryImages = [
-  '/images/gallery/hamiltons2022-66.jpg',
-  '/images/gallery/ballardfamily2021-20.jpg',
-  '/images/gallery/whitneymaternity-37.jpg',
-  '/images/gallery/alyssanewborns-17.jpg',
-  '/images/gallery/lovefamily-119.jpg',
-  '/images/gallery/brandingphotos2023-169.jpg',
-  '/images/gallery/babynoranewborns-55.jpg',
-  '/images/gallery/jessmaternity-61.jpg',
-  '/images/gallery/emilyandluke-7.jpg',
-  '/images/gallery/babyoliver-134.jpg',
-  '/images/gallery/hamiltons2022-43.jpg',
-  '/images/gallery/brandingphotos2023-129.jpg',
-];
 ---
 
 <Layout title="Grace King Photography">
   <Header />
   <main>
-    <section id="home" class="scroll-mt-24">
-      <Hero />
+    <!-- Hero Image Section -->
+    <section class="h-[561px] relative" style="margin-top: 92px;">
+      <img 
+        src="/images/gallery/hamiltons2022-66.jpg"
+        alt="Grace King Photography" 
+        class="w-full h-full object-cover"
+      />
     </section>
 
-    <!-- Welcome Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-cream">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-serif text-2xl md:text-3xl mb-8">Because motherhood is as magical as it is fleeting</h2>
-        <h3 class="font-serif text-xl md:text-2xl mb-6">highlighting motherhood in all it's forms</h3>
-        <p class="text-light text-lg leading-relaxed mb-8">
-          I help moms preserve the fleeting moments of motherhood. Moments for them to be recognized for the things they do that go unsaid, unseen, and unheard. Her moment to shine and her motherhood to be showcased. A moment of connection with each of the beautiful souls she has created and raised.
+    <!-- Grace Here Section -->
+    <section class="bg-cream py-24 px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-serif text-4xl md:text-5xl mb-12 text-center">Grace here</h2>
+        <p class="text-lg leading-relaxed mb-12 text-justify">
+          It wasn't long ago that I sat in my home watching my two daughters just being. Listening to my then 3 year old playing pretend and giggling. Snuggling my newborn close and taking in every coo and yawn. It was then, when I sat relishing in the beauty of my children and my motherhood, that I felt something. A pull. A calling. A desire to preserve all stages of motherhood as the realization set in that this moment, and all moments, are fleeting.
         </p>
-        <a
-          href="/contact"
-          class="inline-block px-8 py-3 bg-light-brown text-white font-montserrat font-medium text-sm uppercase tracking-widest hover:bg-light-brown/90 transition-colors"
-        >
-          Book Now
-        </a>
+        <div class="text-center">
+          <a href="#about" class="inline-block text-sm tracking-wider uppercase hover:opacity-70 transition-opacity">
+            More About Me
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Portfolio Gallery -->
-    <section class="py-20 px-4 md:px-8 lg:px-16">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="font-serif text-3xl md:text-4xl text-center mb-12">recent stories</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          {galleryImages.map((image) => (
-            <div class="aspect-[3/4] overflow-hidden">
-              <img
-                src={image}
-                alt="Grace King Photography"
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-            </div>
-          ))}
+    <!-- Tagline Sections -->
+    <section class="bg-white py-16 px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl mb-8">Because motherhood is as magical as it is fleeting</h2>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-xl md:text-2xl mb-8 uppercase tracking-wide">highlighting motherhood in all it's forms</h3>
+        <p class="text-lg leading-relaxed mb-12 text-justify">
+          I help moms preserve the fleeting moments of motherhood. Moments for them to be recognized for the things they do that go unsaid, unseen, and unheard. Her moment to shine and her motherhood to be showcased. A moment of connection with each of the beautiful souls she has created and raised.
+        </p>
+        <div class="text-center">
+          <a href="#contact" class="inline-block text-sm tracking-wider uppercase hover:opacity-70 transition-opacity">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Carousel Section -->
+    <section class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-8">
+        <h2 class="text-3xl md:text-4xl text-center mb-16">recent stories</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <img src="/images/gallery/babyoliver-134.jpg" alt="Photography" class="w-full aspect-[3/4] object-cover" />
+          <img src="/images/gallery/ballardfamily2021-3.jpg" alt="Photography" class="w-full aspect-[3/4] object-cover" />
+          <img src="/images/gallery/emilyandluke-7.jpg" alt="Photography" class="w-full aspect-[3/4] object-cover" />
+          <img src="/images/gallery/hamiltons2022-43.jpg" alt="Photography" class="w-full aspect-[3/4] object-cover" />
+          <img src="/images/gallery/jessmaternity-61.jpg" alt="Photography" class="w-full aspect-[3/4] object-cover" />
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="scroll-mt-24">
-      <About />
-    </section>
-
-    <!-- Blog Teaser Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-cream">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-serif text-3xl md:text-4xl mb-8">On The Blog</h2>
-        <p class="text-light text-lg mb-8">
-          Stories of motherhood, photography tips, and recent sessions
-        </p>
-        <a
-          href="#contact"
-          class="inline-block px-8 py-3 bg-light-brown text-white font-montserrat font-medium text-sm uppercase tracking-widest hover:bg-light-brown/90 transition-colors"
-        >
-          Read More
-        </a>
+    <section id="about" class="bg-cream py-24 px-8">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <img src="/images/gallery/brandingphotos2023-169.jpg" alt="Grace King" class="w-full aspect-[2/3] object-cover" />
+        </div>
+        <div>
+          <p class="text-lg leading-relaxed text-justify">
+            A life long admirer of creation + art. An eager student of all things beautiful and enriching. My own family is my greatest source of inspiration as it has helped me see the value of those relationships. This inspiration trickles into my sessions, as I see you first hand through the lens of my own motherhood. My sessions go beyond the typical smile and pose photoshoot. I see each as a blank canvas, ready to be made into something beautiful. They are a place of co-creation and collaboration between the two of us, as we artfully approach your session with intention. This honest and genuine approach curates a session of artful imagery that truly become an irreplaceable heirloom.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Contact Form -->
-    <section id="contact" class="scroll-mt-24">
-      <ContactForm />
+    <!-- On The Blog Section -->
+    <section class="bg-white py-20 px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl mb-4">On The Blog</h2>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-cream py-24 px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl mb-8">Hooray! Let's do this!</h2>
+        <p class="text-lg leading-relaxed text-justify mb-12">
+          My photoshoot dates are available on a first come, first serve basis. Dates will be reserved by submitting a complete contract and a retainer of $200. Shoot me an email and let's set up a time to chat and get to know one another! I can't wait to work with you to create beautiful photographic heirlooms you will treasure.
+        </p>
+      </div>
     </section>
   </main>
   <Footer />

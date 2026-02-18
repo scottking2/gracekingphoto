@@ -9,7 +9,7 @@ export default {
       },
       fontFamily: {
         sans: ['Lato', 'sans-serif'],
-        serif: ['La Luxes Serif', 'serif'],
+        serif: ['Playfair Display', 'serif'],
         fjalla: ['Fjalla One', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },

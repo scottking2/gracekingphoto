@@ -7,23 +7,11 @@ import About from '../components/About.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
 
-// Placeholder images - replace with actual photos from Grace
-const familyImages = [
-  '/images/gallery/family/placeholder1.jpg',
-  '/images/gallery/family/placeholder2.jpg',
-  '/images/gallery/family/placeholder3.jpg',
-];
-
-const newbornImages = [
-  '/images/gallery/newborn/placeholder1.jpg',
-  '/images/gallery/newborn/placeholder2.jpg',
-  '/images/gallery/newborn/placeholder3.jpg',
-];
-
-const maternityImages = [
-  '/images/gallery/maternity/placeholder1.jpg',
-  '/images/gallery/maternity/placeholder2.jpg',
-  '/images/gallery/maternity/placeholder3.jpg',
+// Gallery images extracted from live site
+const galleryImages = [
+  '/images/gallery/ceceandjude-421-scaled.jpg',
+  '/images/gallery/dinsbaugh-2-scaled.jpg',
+  '/images/gallery/dinsbaugh-4-scaled.jpg',
 ];
 ---
 
@@ -37,115 +25,57 @@ const maternityImages = [
     <!-- Welcome Section -->
     <section class="py-20 px-4 md:px-8 lg:px-16 bg-cream">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-serif uppercase mb-6">Capturing Life's Precious Moments</h2>
-        <p class="text-light leading-relaxed">
-          [Welcome text to be added - Introduction to Grace's photography services and approach]
+        <h2 class="font-serif text-2xl md:text-3xl mb-8">Because motherhood is as magical as it is fleeting</h2>
+        <h3 class="font-serif text-xl md:text-2xl mb-6">highlighting motherhood in all it's forms</h3>
+        <p class="text-light text-lg leading-relaxed mb-8">
+          I help moms preserve the fleeting moments of motherhood. Moments for them to be recognized for the things they do that go unsaid, unseen, and unheard. Her moment to shine and her motherhood to be showcased. A moment of connection with each of the beautiful souls she has created and raised.
         </p>
+        <a
+          href="/contact"
+          class="inline-block px-8 py-3 bg-light-brown text-white font-montserrat font-medium text-sm uppercase tracking-widest hover:bg-light-brown/90 transition-colors"
+        >
+          Book Now
+        </a>
       </div>
     </section>
 
-    <!-- Family Portfolio -->
-    <Gallery title="Family" images={familyImages} category="family" />
-
-    <!-- Maternity Portfolio -->
-    <Gallery title="Maternity" images={maternityImages} category="maternity" />
-
-    <!-- Newborn Portfolio -->
-    <Gallery title="Newborn" images={newbornImages} category="newborn" />
+    <!-- Portfolio Gallery -->
+    <section class="py-20 px-4 md:px-8 lg:px-16">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="font-serif text-3xl md:text-4xl text-center mb-12">recent stories</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          {galleryImages.map((image) => (
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                src={image}
+                alt="Grace King Photography"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="scroll-mt-24">
       <About />
     </section>
 
-    <!-- Details Section -->
-    <section id="details" class="py-20 px-4 md:px-8 lg:px-16 bg-cream scroll-mt-24">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="font-serif uppercase text-center mb-12">Session Details</h2>
-        <div class="space-y-8">
-          <div>
-            <h3 class="font-serif uppercase mb-4">What to Expect</h3>
-            <p class="text-light leading-relaxed">
-              [Details about what clients can expect during a session - session length, location options, what to bring, etc.]
-            </p>
-          </div>
-          <div>
-            <h3 class="font-serif uppercase mb-4">Pricing & Packages</h3>
-            <p class="text-light leading-relaxed">
-              [Information about pricing structure and available packages]
-            </p>
-          </div>
-          <div>
-            <h3 class="font-serif uppercase mb-4">Booking Process</h3>
-            <p class="text-light leading-relaxed">
-              [Steps for booking a session, deposit requirements, scheduling, etc.]
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-20 px-4 md:px-8 lg:px-16 scroll-mt-24">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="font-serif uppercase text-center mb-12">Education & Experience</h2>
-        <div class="space-y-6">
-          <p class="text-light leading-relaxed text-center">
-            [Information about Grace's background, training, certifications, and experience in photography]
-          </p>
-          <div class="grid md:grid-cols-2 gap-8 mt-12">
-            <div class="text-center">
-              <h3 class="font-serif uppercase mb-4">Certifications</h3>
-              <p class="text-light">
-                [List of professional certifications and credentials]
-              </p>
-            </div>
-            <div class="text-center">
-              <h3 class="font-serif uppercase mb-4">Specializations</h3>
-              <p class="text-light">
-                [Areas of expertise and special training]
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Journal Section -->
-    <section id="journal" class="py-20 px-4 md:px-8 lg:px-16 bg-cream scroll-mt-24">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="font-serif uppercase text-center mb-12">Journal</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Journal Entry 1 -->
-          <article class="bg-white p-6">
-            <div class="aspect-[4/3] bg-light-brown/10 mb-4"></div>
-            <h3 class="font-serif uppercase mb-2">[Blog Post Title 1]</h3>
-            <p class="text-light text-sm mb-4">[Date]</p>
-            <p class="text-light text-sm">
-              [Brief excerpt from blog post or testimonial...]
-            </p>
-          </article>
-
-          <!-- Journal Entry 2 -->
-          <article class="bg-white p-6">
-            <div class="aspect-[4/3] bg-light-brown/10 mb-4"></div>
-            <h3 class="font-serif uppercase mb-2">[Blog Post Title 2]</h3>
-            <p class="text-light text-sm mb-4">[Date]</p>
-            <p class="text-light text-sm">
-              [Brief excerpt from blog post or testimonial...]
-            </p>
-          </article>
-
-          <!-- Journal Entry 3 -->
-          <article class="bg-white p-6">
-            <div class="aspect-[4/3] bg-light-brown/10 mb-4"></div>
-            <h3 class="font-serif uppercase mb-2">[Blog Post Title 3]</h3>
-            <p class="text-light text-sm mb-4">[Date]</p>
-            <p class="text-light text-sm">
-              [Brief excerpt from blog post or testimonial...]
-            </p>
-          </article>
-        </div>
+    <!-- Blog Teaser Section -->
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-cream">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-serif text-3xl md:text-4xl mb-8">On The Blog</h2>
+        <p class="text-light text-lg mb-8">
+          Stories of motherhood, photography tips, and recent sessions
+        </p>
+        <a
+          href="#contact"
+          class="inline-block px-8 py-3 bg-light-brown text-white font-montserrat font-medium text-sm uppercase tracking-widest hover:bg-light-brown/90 transition-colors"
+        >
+          Read More
+        </a>
       </div>
     </section>
 

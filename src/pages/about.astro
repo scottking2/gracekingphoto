@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About - Grace King Photography">
+  <Header />
+  <main>
+    <section class="py-32 px-4 md:px-8 lg:px-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- About Image -->
+          <div class="aspect-[3/4] bg-light-brown/10">
+            <img
+              src="/images/gallery/brandingphotos2023-169.jpg"
+              alt="Grace King"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- About Content -->
+          <div>
+            <h1 class="text-4xl md:text-5xl font-serif mb-8">About Grace</h1>
+            <div class="space-y-6 text-light text-lg leading-relaxed">
+              <p>
+                A life long admirer of creation + art. An eager student of all things beautiful and enriching. My own family is my greatest source of inspiration as it has helped me see the value of those relationships.
+              </p>
+              <p>
+                This inspiration trickles into my sessions, as I see you first hand through the lens of my own motherhood. My sessions go beyond the typical smile and pose photoshoot. I see each as a blank canvas, ready to be made into something beautiful.
+              </p>
+              <p>
+                They are a place of co-creation and collaboration between the two of us, as we artfully approach your session with intention. This honest and genuine approach curates a session of artful imagery that truly become an irreplaceable heirloom.
+              </p>
+            </div>
+            <a
+              href="/contact"
+              class="inline-block mt-8 px-8 py-3 bg-light-brown text-white font-medium uppercase tracking-wider hover:bg-light-brown/90 transition-colors"
+            >
+              Work With Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
